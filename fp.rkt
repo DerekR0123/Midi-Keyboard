@@ -13,25 +13,28 @@
 ;;4. Create a guide line for lessons incorperated and for understanding what each part means
 ;;5. Research Songs / Notes / Music for idea's
 ;;6. Learn about Sleep timing Clock Cycles
-;;Possibly or might have to do this in milestone 2 (#7)
-;;7. Implement Let is Lambda for either definitions or song part combinations
+;;7. Implement Let for definitions
+;;8. Upload pictures of Notes + Sheet music from Songs in this program
 
-;;Done: 1 , 2 , 3 , 4 , 5 , 6
+;;Done: 1 , 2 , 3 , 4 , 5 , 6 , 7 is done
 
 ;;Milestone 2 Goals:
 ;;1. Implement recursive songs to show understanding of class
-;;2. Research Libraries to add additional functionality to program
-;;3. Create a guide for a user to be able to type stuff in my program without having to read the whole code
-;;4. Finishing Touches on things from Milestone 1:
-;;5. Upload pictures of Notes + Sheet music from Songs in this program
-;;6. Research Key-Events and UI
-;;7. Create a README with a menu to navigate my program
-;;Optional -> Implement Iterative songs to show understanding of class
+;;2. Fix proper sound values -> theres Ranges from A to F I put random values
+;;3. Finish Fixing Sleep Values so stream isnt effected
+;;4. Create a guide for a user to be able to type stuff in my program without having to read the whole code
+;;5. Finishing Touches on things from Milestone 1:
+;;6. Research Libraries to add additional functionality to program
+;;7. Research Key-Events and UI
+;;8. Create a README with a menu to navigate my program
+;;Possibly id like to implement lambda over the combinations
+;;9. Implement Lambda into combinations
+;;Optional -> Implement Iterative songs to show understanding of class after recursion
 ;;Optional -> Implement Keyboard-event's to play notes
 ;;Optional -> Implement a UI for user to do the things in this program
 ;;OPTIONAL -> Create a demo for an audience user to play with
 
-;;Done: 5, almost 7
+;;Done: 
 
 ;; MENU (Documentation to make my project easier to understand)
 
@@ -59,7 +62,7 @@
 ;;We give this song a name and the user can type in its name at run time and it will play back the user's song!
 ;;Class Lesson: Structure creation / Function Calling / Inheritence
 ;;
-;;1.5
+;;1.5 Recursion
 
 
 
@@ -76,15 +79,24 @@
 ;;1.2
 ;;;;;;;;;;;;;;;Creating Note Objects;;;;;;;;;;;;;;;;;;;;;;
 ;;Creating Note Objects from traditional Piano Keys;;;;;;
-;;Will incorperate the Let  / Lambda (let-is-lambda) that we were taught in class
+;;Will incorperate the Let  / Lambda that we were taught in class
 
-(define E (piano-tone 60))
-(define D (piano-tone 65))
-(define B (piano-tone 55))
-(define C (piano-tone 70))
-(define A (piano-tone 62))
-(define G (piano-tone 68))
-(define F (piano-tone 75))
+;;Let 
+(define E
+(let [(E (piano-tone 60))] E))
+(define D
+(let [(D (piano-tone 65))] D))
+(define B
+(let [(B (piano-tone 55))] B))
+(define C
+(let [(C (piano-tone 70))] C))
+(define A
+(let [(A (piano-tone 62))] A))
+(define G
+(let [(G (piano-tone 68))] G))
+(define F
+(let [(F (piano-tone 75))] F))
+
 
 ;;;;;;;;;;;;;;; END of Note Creation;;;;;;;;;;;;;;;;;;;
 
@@ -638,7 +650,15 @@
         
 ;;1.4
 ;;;;;;;;;;;;;;;;; SONG Creation;;;;;;;;;;;;;;;;;;;
-(define (song)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Actual Real Composition created with notes
+;;Composition done by Beethoven
+;;Composition Name: Fur Elise
+;;Sheet Music: In Repository
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Attempt To Change this to lambda if time later
+
+(define (FurElise)
   (part1 'password1)
   (part2 'password2)
   (part3 'password3)
@@ -648,6 +668,13 @@
 
 ;;;;;;;;;;;;;;;;;;END OF SONG CREATION;;;;;;;;;;;
 
+
+
+
+
+
+
+;;Idea for Environment Later
 ;(big-bang 1000 1000 2 3)
 ;;(define (change w a-key-event)
  ;;(cond
