@@ -1,2 +1,62 @@
-# Midi-Keyboard
-Midi Piano-Tones Using OPL Techniques
+## Midi-Keyboard ##<br>
+<h3>Derek Ross</h3>
+
+## Overview ##
+<h4>What and How?</h4><br>
+
+So what exactly is a Midi-Keyboard? Well a Midi-Keyboard is a keyboard that you can hook up to your computer
+and use it with different music creation software to produce all sorts of cool results! I created a program that can map notes from a piano to objects (Later keys) and have the ability to manipulate them into some cool results. I started off by creating objects that represent notes and then using a lot of the lessons learned in class; turned these note objects into a larger song object. Once all of this was done, I added in a system-menu that allows you to play notes, parts of a song, and a whole song or display the notes for the parts or for the entire song; as well as a help function to guide the user through my menu commands using a seperate text menu built in the help function.
+<br><br>
+
+<!--- Google Image - Derek --->
+Here is a similar idea of what it looks like in the real world<br>
+<br>
+<img src="https://i.ytimg.com/vi/-dhS0qbpMqM/maxresdefault.jpg" width="15%"></img> <br>
+<br>
+<br>
+<!--- End of Image --->
+
+<!--- Dereks Section --->
+<h3>What Approaches from class will we bring?</h3><br>
+<br>
+<h5>Data Abstraction</h5> - I created some objects that represent Notes on a piano which I used to abstractly create song objects. Later on through a password based system I created a system-menu to use functions to display and play different notes , parts of a song, and the entire song.<br>
+<br>
+<h5>Recursion</h5> -  This was implemented through a series of functions that are able to display the Notes from a part of song or the entire song using helper functions that incorperate Lambda, Notes that Incorperate Let, and a main function that recursively uses the notes in a display mannor.<br>
+<br>
+<h5>Object-Orientation</h5> - Just about everything in this program was created as an object. From the notes, parts of a song, song, midi-keyboard system-menu, text help menu, all the way down to the strings that were as objects for the help menu. I created many objects to provide Data abstraction and to show use of the understanding of Object Oriented Programming.<br>
+<br>
+<h5>Functional Approaches</h5> - In my program many functions and sub functions are used to complete most of the actions using the objects we have created and the implementations I wanted to display knowledge of.<br>
+<br>
+<h5>State-Modification Approaches</h5> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input.<br>
+<br>
+<br>
+
+<h3>External Technologies:</h3><br>
+The only external Technology that was used was some Sheet Music for the song the program was based upon: FurElise by Beethovan and a piano from my home for understanding the idea of a piano key layout.<br>
+<br>
+
+<h3>Interal Technologies:</h3><br>
+<ul>Libraries and Accessories:
+<li>Port Audio (Audio Engine)</li>
+  <li>Rsound (Plugin Library)</li>
+  <br>
+  <br>
+  <h3>Understanding My Code</h3>
+I wanted to make my program and code easier to understand so I incorperated a small numeric text menu in the comments of my code.
+If you read my code it will be at the top and will have each section neatly divided with there numeric listings and an explanation of what they do and why they are in my program. I hope this makes things easier to read, understand, follow, and hopefully run my program on your own.<br>
+<br>
+
+<h3>Deliverable's and Demonstration's</h3><br>
+The goal at the end of this project is for me to be able to stand in front of the class and show them why my program was a good fit for this class. I want to be able to show them what the peices of the program represent in terms of lessons learned in OPL. Following the explanation and incorperation of the lessions and implementations I would like to run the program and show the system-menu and help-text menu that I made. These menu's will allow me to show of all the ablilites of my program and with success I will type in the password that will activate the FurElise in Piano-notes racket.<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3>Architecture</h3>
+If you trace back to this the FP-Proposal repository you will find a powerpoint with details of how I planned to carry out this project and all the things it entitles.
+<br>
+<br>
+<h3>Group Responsabilities</h3>
+Derek Ross @DerekR0123 <br>
+At this current time I will be writing and working on ALL features.
