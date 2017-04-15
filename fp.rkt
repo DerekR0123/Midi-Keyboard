@@ -1,40 +1,16 @@
 #lang racket
+
+;;Derek Ross, Derek_Ross@student.uml.edu , Final Project OPL
+
+;;Midi Keyboard
+
+
 ;;Libraries
 (require rsound
          rsound/piano-tones)
-         ;;htdp/world)
 
-;;All of this will go in a readme eventually
 
-;;Milestone 1 Goals:
-;;1. Map Notes to objects
-;;2. Create functions to pair these notes
-;;3. Create a system to make a song out of the pairings
-;;4. Create a guide line for lessons incorperated and for understanding what each part means
-;;5. Research Songs / Notes / Music for idea's
-;;6. Learn about Sleep timing Clock Cycles
-;;7. Implement Let for definitions
-;;8. Upload pictures of Notes + Sheet music from Songs in this program
-
-;;Done: 1 , 2 , 3 , 4 , 5 , 6 , 7 is done
-
-;;Milestone 2 Goals:
-;;1. Implement recursive songs to show understanding of class
-;;2. Fix proper sound values -> theres Ranges from A to F I put random values
-;;3. Finish Fixing Sleep Values so stream isnt effected
-;;4. Create a guide for a user to be able to type stuff in my program without having to read the whole code
-;;5. Finishing Touches on things from Milestone 1:
-;;6. Research Libraries to add additional functionality to program
-;;7. Research Key-Events and UI
-;;8. Create a README with a menu to navigate my program
-;;Possibly id like to implement lambda over the combinations
-;;9. Implement Lambda into combinations
-;;Optional -> Implement Iterative songs to show understanding of class after recursion
-;;Optional -> Implement Keyboard-event's to play notes
-;;Optional -> Implement a UI for user to do the things in this program
-;;OPTIONAL -> Create a demo for an audience user to play with
-
-;;Done: 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; MENU (Documentation to make my project easier to understand)
 
@@ -63,11 +39,31 @@
 ;;Class Lesson: Structure creation / Function Calling / Inheritence
 ;;
 ;;1.5 Recursion
+;;The goal here is to implement a function that makes sence in my program but also displays my understanding
+;;of the concept taught in class called Recursion. If you look at this section I wrote a little code that could
+;;display notes recursively - however it ends up causing a little bit of an error due to the way rsound works.
+;;I proceeded from there to implement it by outputting the notes which can show the user what notes makes each
+;;part of the song and what makes the whole thing!
+;;
+;;1.6 Pretty Text
+;;The goal here is to implement lambda and sub fuctions to create a text menu to help the user navigate the ability of this
+;;program. Using some functions created with lambda and the Cons structure ability I was able to take a few strings and
+;;create a text menu! Theres a little info down there too about how the new line character doesn't really exist in strings
+;;in racket and how I found a way around it!
+;;
+;;1.7 Iteration
+;;The goal here is to implement an iterative function to display a text menu. Its essentially the same thing as 1.6 but
+;;in an iterative call to show display my understanding of Iteration
+;;
+;;1.8 Midi-keyboard Menu
+;;The goal here is to implement a password based system that based on what the user enters it will run a function
+;;or part of the program that we have created! Its essentially our go-to place to run things from our program.
+;;In order to use it the user should use the (help) command that brings up text from 1.6 Pretty Text explaining
+;;all the commands that our menu has to offer.
 
 
 
-
-;;;;;;;;;;;;;;;;;;;;; END OF MENU ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;; END OF MENU ;;;;;;;;;;;;;;;;
 
 
 
@@ -75,6 +71,11 @@
 
 ;;1.1
 ;;;;;;;;;;;;;;;; Object Creation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;This will cover just about the entire project so as you go through you can read each section and understand why
+;;I consider it to be the creation of objects.
+;;
+;;;;;;;;;;;;;;;;ENDS AT THE END OF THE PROGRAM;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;1.2
 ;;;;;;;;;;;;;;;Creating Note Objects;;;;;;;;;;;;;;;;;;;;;;
@@ -98,11 +99,10 @@
 (let [(F (piano-tone 75))] F))
 
 
-;;;;;;;;;;;;;;; END of Note Creation;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;; END of 1.2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;;1.3
-;;;Creating Parts of Songs ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;1.3 Creating Parts of Songs ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Beethovin -> Fur Elise
 ;;Uses 7 different notes -> so creating 7 note objects.
 ;;Has 6 segments of notes -> each can be broken down into functions.
@@ -620,23 +620,23 @@
 
 (sleep 0.3)
 (play A)
-(sleep 0.27)
+(sleep 0.20)
 (play E)
-(sleep 0.27)
+(sleep 0.20)
 (play A)
 
 (sleep 0.3)
 (play E)
-(sleep 0.27)
+(sleep 0.20)
 (play E)
-(sleep 0.27)
+(sleep 0.20)
 (play G)
 
 (sleep 0.3)
 (play A)
-(sleep 0.27)
+(sleep 0.20)
 (play E)
-(sleep 0.27)
+(sleep 0.20)
 (play A)
 
 ;;;;end of line2 of part6
@@ -644,7 +644,10 @@
 )
 (else "bad password")))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;; END OF PART5 ;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;; END OF PART6;;;;; ;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;END OF 1.3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
         
@@ -656,7 +659,6 @@
 ;;Composition Name: Fur Elise
 ;;Sheet Music: In Repository
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Attempt To Change this to lambda if time later
 
 (define (FurElise)
   (part1 'password1)
@@ -666,15 +668,179 @@
   (part5 'password5)
   (part6 'password6))
 
-;;;;;;;;;;;;;;;;;;END OF SONG CREATION;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;END OF 1.4 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+;;1.5 Recursion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;list '(A B D)) will not work
+;;Reason why it because the symbols come out a 'A 'B -> which mean nothing. You need to cons the actual
+;;variable containers. With that being said it isn't possible to play more then two tones in a cons cell list
+;;before it spits out an error
+
+;;Incorrect but good for proof of an idea
+(define list (cons A B))
+(define (recursive-play list)
+  (if (null? list)
+      '()
+      ((play (car list))
+       (recursive-play (cdr list)))))
+;;
+
+
+;;So in order to get a good view of the recursion I have learned in class I will output the notes from the song.
+;;Here I will create the lists for each part which we can later access with a system.
+
+;;Each part put in a list
+(define recursive-part1 '(E D E D E B D C A C E A B E G B C E E D '- A E A  E E G A E A))
+(define recursive-part2 '(E D E B D C A C E A B E C B A E D E D E B D C '- A E A E E G A E A '-))
+(define recursive-part3 '(A C E A B E G B C E E D E D E B D C A C E A A E A E E G A E A '- A E A))
+(define recursive-part4 '(B E C B A B C D E G F E D F E D C E D C E E G A E A C G C G G B A E A))
+(define recursive-part5 '(B E E E E E E E D E D E D E B D C A C E A B  E G B E E '- '- A E A E E G))
+(define recursive-part6 '(C E E D E D E B D C A C E A B E C B A A E A '- A E A E E G A E A))
+
+(define recursive-whole '('(E D E D E B D C A C E A B E G B C E E D '- A E A  E E G A E A)
+                          '(E D E B D C A C E A B E C B A E D E D E B D C '- A E A E E G A E A '-)
+                          '(A C E A B E G B C E E D E D E B D C A C E A A E A E E G A E A '- A E A)
+                          '(B E C B A B C D E G F E D F E D C E D C E E G A E A C G C G G B A E A)
+                          '(B E E E E E E E D E D E D E B D C A C E A B  E G B E E '- '- A E A E E G)
+                          '(C E E D E D E B D C A C E A B E C B A A E A '- A E A E E G A E A)))
+;;Function that can output the notes from a list
+(define (display list)
+  (if (null? list)
+      '()
+      (cons (car list)
+       (display (cdr list)))))
+
+;; system that allows you to display whatever part you want depending what you play
+(define (display-notes password)
+ (cond ((eq? password 'part1) (display recursive-part1))
+       ((eq? password 'part2) (display recursive-part2))
+       ((eq? password 'part3) (display recursive-part3))
+       ((eq? password 'part4) (display recursive-part4))
+       ((eq? password 'part5) (display recursive-part5))
+       ((eq? password 'part6) (display recursive-part6))
+       ((eq? password 'whole) (display recursive-whole))
+       (else "Invalid entry , Please enter a valid entry. See Documentation for valid entry's")))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;END OF 1.5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+;;;1.6 Pretty DISPLAY!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;This section is devoted into making a text UI menu to navigate through the options and abilities my program
+;;Provides. However you can't just type in text like a printf from C programming -> there is no such thing as a
+;; new line character. In order to get past this I made a function:
+
+;;Using lambda I made the identity function to print a string which can be used to add a newline between strings
+(define (show y)
+  ((lambda (x) x) y))
+
+;;Opening Strings
+(define str1 "Welcome, for a list of options please type in (help)")
+(define str2 "Otherwise proceed to enter the desired command:")
+(show str1)
+(show str2)
+
+;;Help Option String Notes
+(define str3 "Please enter one of these commands:")
+(define str4 "To display notes please enter (midi-keyboard 'display-part1) - displays notes for part 1")
+(define str5 "                              (midi-keyboard 'display-part2) - displays notes for part 2")
+(define str6 "                              (midi-keyboard 'display-part3) - displays notes for part 3")
+(define str7 "                              (midi-keyboard 'display-part4) - displays notes for part 4")
+(define str8 "                              (midi-keyboard 'display-part5) - displays notes for part 5")
+(define str9 "                              (midi-keyboard 'display-part6) - displays notes for part 6")
+(define str10"                              (midi-keyboard 'display-whole) - displays notes for the whole song")
+(define str11 " ")
+
+;;Help Option String Notes
+(define str12 "Please enter one of these commands:")
+(define str13 "To display notes please enter (midi-keyboard 'play-part1) - plays notes for part 1")
+(define str14 "                              (midi-keyboard 'play-part2) - plays notes for part 2")
+(define str15 "                              (midi-keyboard 'play-part3) - plays notes for part 3")
+(define str16 "                              (midi-keyboard 'play-part4) - plays notes for part 4")
+(define str17 "                              (midi-keyboard 'play-part5) - plays notes for part 5")
+(define str18 "                              (midi-keyboard 'play-part6) - plays notes for part 6")
+(define str19 "                              (midi-keyboard 'play-whole) - plays notes for the whole song")
+
+;;Total Menu
+(define list5 (cons str3 (cons str4 (cons str5 (cons str6 (cons str7 (cons str8 (cons str9 (cons str10
+              (cons str11 (cons str12 (cons str13 (cons str14 (cons str15 (cons str16 (cons str17 (cons str18
+               (cons str19 str11))))))))))))))))))
+
+
+;;Help Function to Call menu
+(define (help)
+  (show list5))
+
+;;Midi-keyboard Menu will be done in section 1.8
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;END OF 1.6 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;1.7 Iterative way to display menu (little slow) ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\
+
+;;Not fully correct but good for proof of concept
+(define (help-iter)
+  (helper1 0))
+  (define (helper1 counter)
+  (if (> counter 8)
+      null
+      (cond ((eqv? counter 1) "hello" (helper1 (+ counter 1)))
+            ((eqv? counter 2) (show str4) (helper1 (+ counter 1)))
+            ((eqv? counter 3) (show str5) (helper1 (+ counter 1)))
+            ((eqv? counter 4) (show str6) (helper1 (+ counter 1)))
+            ((eqv? counter 5) (show str7) (helper1 (+ counter 1)))
+            ((eqv? counter 6) (show str8) (helper1 (+ counter 1)))
+            ((eqv? counter 7) (show str9) (helper1 (+ counter 1)))
+            ((eqv? counter 8) (show str10) (helper1 (+ counter 1)))
+            (else (helper1 (+ counter 1))))))
+;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;END OF 1.7 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;1.8 Midi-Keyboard Menu!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;This menu allows you to do any part of my program just by typing in the desired phrase
+
+(define (midi-keyboard password)
+  (cond ((eqv? password 'display-part1) (display-notes 'part1))
+        ((eqv? password 'display-part2) (display-notes 'part2))
+        ((eqv? password 'display-part3) (display-notes 'part3))
+        ((eqv? password 'display-part4) (display-notes 'part4))
+        ((eqv? password 'display-part5) (display-notes 'part5))
+        ((eqv? password 'display-part6) (display-notes 'part6))
+        ((eqv? password 'display-whole) (display-notes 'whole))
+        ((eqv? password 'play-part1)    (part1 'password1))
+        ((eqv? password 'play-part2)    (part1 'password2))
+        ((eqv? password 'play-part3)    (part1 'password3))
+        ((eqv? password 'play-part4)    (part1 'password4))
+        ((eqv? password 'play-part5)    (part1 'password5))
+        ((eqv? password 'play-part6)    (part1 'password6))
+        ((eqv? password 'play-whole)    (FurElise))
+        (else "Invalid Entry -> Please enter (help) for more info")))
+
+
+;;;;;;END OF 1.8 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 
 
 
 
+;;End of Program
+;;Derek Ross.
 
-;;Idea for Environment Later
+
+
+;;Extra Idea's
+
+
+;;;;;;;;;;;;;Idea for Environment Later;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;(big-bang 1000 1000 2 3)
 ;;(define (change w a-key-event)
  ;;(cond
@@ -682,3 +848,13 @@
    ;; [(key=? a-key-event 'right) (play (piano-tone 80))]
    ;; [else w]))
 
+
+
+
+;;;;;;;;;;;;;;; idea #2 for environment
+;;(define (key-press x y)
+  ;;(cond [(equal? y 'x) (play A)]
+    ;;    [(equal? y 'c) (play B)]
+  ;;      [else x]))
+
+;;(big-bang 1000 (on-release key-press))
