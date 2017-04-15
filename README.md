@@ -17,7 +17,7 @@ Here is a similar idea of what it looks like in the real world<br>
 <!--- End of Image --->
 
 <!--- Dereks Section --->
-<h3>Approaches brought from Class/h3><br>
+<h3>Approaches brought from Class</h3><br>
 <br>
 <h5>Data Abstraction</h5> - I created some objects that represent Notes on a piano which I used to abstractly create song objects. Later on through a password based system I created a system-menu to use functions to display or play different notes , parts of a song, and the entire song.<br>
 <br>
