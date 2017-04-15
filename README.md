@@ -5,7 +5,7 @@
 <h4>What and How?</h4><br>
 
 So what exactly is a Midi-Keyboard? Well a Midi-Keyboard is a keyboard that you can hook up to your computer
-and use it with different music creation software to produce all sorts of cool results! I created a program that can map notes from a piano to objects (Later keys) and have the ability to manipulate them into some cool results. I started off by creating objects that represent notes and then using a lot of the lessons learned in class; turned these note objects into a larger song object. Once all of this was done, I added in a system-menu that allows you to play notes, parts of a song, and a whole song or display the notes for the parts or for the entire song; as well as a help function to guide the user through my menu commands using a seperate text menu built in the help function.
+and use it with different music creation software to produce all sorts of cool results! I created a program that can map notes from a piano to objects (Later keys) and have the ability to manipulate them into some cool results. I started off by creating objects that represent notes and then using a lot of the lessons learned in class; turned these note objects into a larger song object. Once all of this was done, I added in a system-menu that allows you to play or display: notes, parts of a song, and a whole song (FurElise). The last part to my program is a system-menu with a password based input can run any of my programs abilities and functions. I also created a text based help menu function that can explain what commands work in my system menu for user conveinance (help).<br>
 <br><br>
 
 <!--- Google Image - Derek --->
@@ -17,9 +17,9 @@ Here is a similar idea of what it looks like in the real world<br>
 <!--- End of Image --->
 
 <!--- Dereks Section --->
-<h3>What Approaches from class will we bring?</h3><br>
+<h3>Approaches brought from Class/h3><br>
 <br>
-<h5>Data Abstraction</h5> - I created some objects that represent Notes on a piano which I used to abstractly create song objects. Later on through a password based system I created a system-menu to use functions to display and play different notes , parts of a song, and the entire song.<br>
+<h5>Data Abstraction</h5> - I created some objects that represent Notes on a piano which I used to abstractly create song objects. Later on through a password based system I created a system-menu to use functions to display or play different notes , parts of a song, and the entire song.<br>
 <br>
 <h5>Recursion</h5> -  This was implemented through a series of functions that are able to display the Notes from a part of song or the entire song using helper functions that incorperate Lambda, Notes that Incorperate Let, and a main function that recursively uses the notes in a display mannor.<br>
 <br>
@@ -29,6 +29,7 @@ Here is a similar idea of what it looks like in the real world<br>
 <br>
 <h5>State-Modification Approaches</h5> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input.<br>
 <br>
+<h5>Let and Lambda</h5> - If you trace my program you will find that the notes are created using a Let is Lambda type system and then later on I use lambda to create the identity function and then use that to create text strings to get around the missing newline character problem for my help text-menu.<br>
 <br>
 
 <h3>External Technologies:</h3><br>
@@ -47,11 +48,9 @@ If you read my code it will be at the top and will have each section neatly divi
 <br>
 
 <h3>Deliverable's and Demonstration's</h3><br>
-The goal at the end of this project is for me to be able to stand in front of the class and show them why my program was a good fit for this class. I want to be able to show them what the peices of the program represent in terms of lessons learned in OPL. Following the explanation and incorperation of the lessions and implementations I would like to run the program and show the system-menu and help-text menu that I made. These menu's will allow me to show of all the ablilites of my program and with success I will type in the password that will activate the FurElise in Piano-notes racket.<br>
+The goal at the end of this project is for me to be able to stand in front of the class and show them why my program was a good fit for this class. I want to be able to show them what the peices of the program represent in terms of lessons learned in OPL. Following the explanation and incorperation of the lessions and implementations I would like to run the program and show the system-menu and help-text menu that I made. These menu's will allow me to show of all the ablilites of my program and with success I will type in the password that will activate preferably the FurElise in Piano-notes racket.<br>
 <br>
-<br>
-<br>
-<br>
+
 <br>
 <h3>Architecture</h3>
 If you trace back to this the FP-Proposal repository you will find a powerpoint with details of how I planned to carry out this project and all the things it entitles.
@@ -59,4 +58,10 @@ If you trace back to this the FP-Proposal repository you will find a powerpoint 
 <br>
 <h3>Group Responsabilities</h3>
 Derek Ross @DerekR0123 <br>
-At this current time I will be writing and working on ALL features.
+At this current time I will be writing and working on ALL features.<br>
+<br>
+<h3>Citation</h3>
+All of the code is written by my self.<br>
+All of the things incorperated are my idea's or idea's learned from class lecture in OPL by Fred Martin.<br>
+All of the notes and the song are credited to Beethovin. The song is called FurElise.<br>
+All of the documentation and other peices of the project are done by my self. <br>
