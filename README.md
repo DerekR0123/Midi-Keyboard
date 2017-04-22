@@ -18,17 +18,19 @@ Here is a similar idea of what it looks like in the real world<br>
 
 <h3>Approaches brought from Class</h3><br>
 <br>
-<h5>Data Abstraction</h5> - I created some objects that represent Notes on a piano which I used to abstractly create song objects. Later on through a password based system I created a system-menu to use functions to display or play different notes , parts of a song, and the entire song.<br>
+<h5>Data Abstraction</h5> - I created some objects that represent Notes on a piano, which I used to abstractly create song objects. Later on through a password based system I created a system-menu to use functions to display or play different notes , parts of a song, and the entire song.<br>
 <br>
-<h5>Recursion</h5> -  This was implemented through a series of functions that are able to display the Notes from a part of song or the entire song using helper functions that incorperate Lambda, Notes that Incorperate Let, and a main function that recursively uses the notes in a display mannor.<br>
+<h5>Recursion</h5> -  This was implemented through a series of functions that are able to Recursively display the Notes from a part of song or the entire song using helper functions that take the note objects we created earlier using Let-Is-Lambda and read them from the parts of the song or whole song that we formed using one of our other functions. The ending result recursively displays the notes as output.<br>
 <br>
-<h5>Object-Orientation</h5> - Just about everything in this program was created as an object. From the notes, parts of a song, song, midi-keyboard system-menu, text help menu, all the way down to the strings that were as objects for the help menu. I created many objects to provide Data abstraction and to show use of the understanding of Object Oriented Programming.<br>
+<h5>Object-Orientation</h5> - Just about everything in this program was created as an object. From the notes, parts of a song, song, midi-keyboard system-menu, text help-menu, and all the way down to the strings that were as objects for the text help-menu. I created many objects to provide Data abstraction and to show use of the understanding of Object Oriented Programming in Racket.<br>
 <br>
-<h5>Functional Approaches</h5> - In my program many functions and sub functions are used to complete most of the actions using the objects we have created and the implementations I wanted to display knowledge of.<br>
+<h5>Functional Approaches</h5> - In my program many functions and sub (helper) functions are used to complete most of the actions using the objects we have created in hopes of displaying knowledge of the implementations taught in class.<br>
 <br>
 <h5>State-Modification Approaches</h5> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input.<br>
 <br>
-<h5>Let and Lambda</h5> - If you trace my program you will find that the notes are created using a Let is Lambda type system and then later on I use lambda to create the identity function and then use that to create text strings to get around the missing newline character problem for my help text-menu.<br>
+<h5>Let and Lambda</h5> - In my program I decided to incorperate Let-Is-Lambda by creating the note objects using this approach. I eventually needed to use it for a helper function or known as the identity function for my text help-menu. I used this helper function to create text strings to get around the missing newline character problem for my help text-menu.<br>
+<br>
+<h5>Iteration</h5> - In my program I created a way to display the notes recursively and then I decided to show my knowledge of iteration and re-create the same thing iteratively. I also did this as a way to play the music later on as well. I left it commented out because it literally did the same thing that was already acomplished. It is only there to serve as a proof of concept.<br>
 <br>
 
 <h3>External Technologies:</h3><br>
