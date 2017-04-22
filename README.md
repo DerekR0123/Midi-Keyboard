@@ -54,12 +54,12 @@ The goal is for me to be able to stand in front of the class and show them why m
 
 <br>
 <h3>Architecture</h3>
-If you trace back to this the FP-Proposal repository you will find a powerpoint with details of how I planned to carry out this project and all the things it entitles.
+Insert real achitecture diagram here
 <br>
 <br>
 <h3>Group Responsabilities</h3>
 Derek Ross @DerekR0123 <br>
-At this current time I will be writing and working on ALL features.<br>
+Sole contributor.<br>
 <br>
 <h3>Citation</h3>
 All of the code is written by my self.<br>
