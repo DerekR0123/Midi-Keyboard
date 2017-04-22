@@ -5,10 +5,10 @@
 <h4>What and How?</h4><br>
 
 So what exactly is a Midi-Keyboard? Well a Midi-Keyboard is a keyboard that you can hook up to your computer
-and use it with different music creation software to produce all sorts of cool results! I created a program that can map notes from a piano to objects (Later keys) and have the ability to manipulate them into some cool results. I started off by creating objects that represent notes and then using a lot of the lessons learned in class; turned these note objects into a larger song object. Once all of this was done, I added in a system-menu that allows you to play or display: notes, parts of a song, and a whole song (FurElise). The last part to my program is a system-menu with a password based input can run any of my programs abilities and functions. I also created a text based help menu function that can explain what commands work in my system menu for user conveinance (help).<br>
+and use it with different music creation software to produce all sorts of cool results! I created a program that can map notes from a piano to data objects and have the ability to manipulate them into some cool results. The language this program was completed in is called Racket, and the libraries used for the project are rsound and portaudio. The biggest part of these libraries that I used included the section called Piano-tone which allowed me to give numeric values for piano key noises & the ability to play them. I started off by creating objects that represent notes (Using Let-is-Lambda style approach) and then using a lot of the lessons learned in class; turned these note objects into a larger song object. Once all of this was done, I added in some  recursive / iterative functions that allows you to play or display notes: individually, as a part of the song, and/or as the whole song (FurElise). In order to properly use these functions I created a system-UI-menu with a password based input (Similar to the Bank ATM problem from homework) that can run any of my programs abilities and functions based on user input. Lastly I created a text-based Help-menu function that can explain what commands work in my system menu for user navigation (help).<br>
 <br><br>
 
-<!--- Google Image - Derek --->
+<!--- Google Image --->
 Here is a similar idea of what it looks like in the real world<br>
 <br>
 <img src="https://i.ytimg.com/vi/-dhS0qbpMqM/maxresdefault.jpg" width="15%"></img> <br>
@@ -16,7 +16,6 @@ Here is a similar idea of what it looks like in the real world<br>
 <br>
 <!--- End of Image --->
 
-<!--- Dereks Section --->
 <h3>Approaches brought from Class</h3><br>
 <br>
 <h5>Data Abstraction</h5> - I created some objects that represent Notes on a piano which I used to abstractly create song objects. Later on through a password based system I created a system-menu to use functions to display or play different notes , parts of a song, and the entire song.<br>
