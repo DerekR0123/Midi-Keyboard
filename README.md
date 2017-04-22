@@ -54,7 +54,7 @@ The goal is for me to be able to stand in front of the class and show them why m
 
 <br>
 <h3>Architecture</h3>
-Insert real achitecture diagram here
+![ScreenShot](https://github.com/DerekR0123/Midi-Keyboard/blob/master/MidiArchitecture.png)
 <br>
 <br>
 <h3>Group Responsabilities</h3>
