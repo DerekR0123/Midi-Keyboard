@@ -54,7 +54,7 @@ The goal is for me to be able to stand in front of the class and show them why m
 
 <br>
 <h3>Architecture</h3>
-![ScreenShot](https://github.com/DerekR0123/Midi-Keyboard/blob/master/MidiArchitecture.png)
+<img src="https://github.com/DerekR0123/Midi-Keyboard/blob/master/MidiArchitecture.png" width="15%"></img> <br>
 <br>
 <br>
 <h3>Group Responsabilities</h3>
