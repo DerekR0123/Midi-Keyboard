@@ -34,7 +34,7 @@ Here is a similar idea of what it looks like in the real world<br>
 <br>
 
 <h3>External Technologies:</h3><br>
-The only external Technology that was used was some Sheet Music for the song the program was based upon: FurElise by Beethovan and a piano from my home for understanding the idea of a piano key layout.<br>
+The only external Technology that was used was: Sheet Music for the song the program was based upon - FurElise, by Beethovan, and a piano from my home for a better understanding of the concept.<br>
 <br>
 
 <h3>Interal Technologies:</h3><br>
@@ -44,12 +44,12 @@ The only external Technology that was used was some Sheet Music for the song the
   <br>
   <br>
   <h3>Understanding My Code</h3>
-I wanted to make my program and code easier to understand so I incorperated a small numeric text menu in the comments of my code.
-If you read my code it will be at the top and will have each section neatly divided with there numeric listings and an explanation of what they do and why they are in my program. I hope this makes things easier to read, understand, follow, and hopefully run my program on your own.<br>
+I wanted to make my program and code easier to understand so I incorperated a small numeric-text-menu in the comments of my code.
+If you read my code it will be at the top and will have each section neatly divided with there numeric listings and an explanation of what they do, why they are in my program, and where to find them in my program. I hope this makes things easier to read, understand, follow, and hopefully run my program on your own.<br>
 <br>
 
 <h3>Deliverable's and Demonstration's</h3><br>
-The goal at the end of this project is for me to be able to stand in front of the class and show them why my program was a good fit for this class. I want to be able to show them what the peices of the program represent in terms of lessons learned in OPL. Following the explanation and incorperation of the lessions and implementations I would like to run the program and show the system-menu and help-text menu that I made. These menu's will allow me to show of all the ablilites of my program and with success I will type in the password that will activate preferably the FurElise in Piano-notes racket.<br>
+The goal is for me to be able to stand in front of the class and show them why my program was a good fit for this class. I want to be able to show them what the peices of the program represent in terms of lessons learned in OPL. Following the explanation and incorperation of the lessions and implementations I would like to run the program and show the system-menu and help-text menu that I made. These menu's will allow me to show of all the ablilites of my program and with success I will type in the password that will activate preferably the FurElise in Piano-notes racket.<br>
 <br>
 
 <br>
