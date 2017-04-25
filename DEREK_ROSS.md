@@ -12,7 +12,7 @@ I would like to pick out specific topics and highlight some of the code that emb
 approach. I chose to do this in order to display proper understanding of the concept and avoid the "Set!" approach we were warned about.
 Below is an excerpt of the code:<br>
 <br>
-```.
+```
 (define E
 (let [(E (piano-tone 60))] E))
 (define D
