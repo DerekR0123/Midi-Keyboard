@@ -39,7 +39,6 @@ Below is an excerpt of the code:<br>
 
 (define F
 (let [(F (piano-tone 75))] F))
-```
 <br>
 <br>
 
