@@ -35,6 +35,7 @@ Below is an excerpt of the code:<br>
 Below is an excerpt of the code:<br>
 <br>
 ```
+```
 ;;Each part put in a list
 (define recursive-part1 '(E D E D E B D C A C E A B E G B C E E D '- A E A  E E G A E A))
 (define recursive-part2 '(E D E B D C A C E A B E C B A E D E D E B D C '- A E A E E G A E A '-))
