@@ -14,7 +14,35 @@ Below is an excerpt of the code:<br>
 <br>
 ```
 (define E
+(let [(E (piano-tone 60))] E))
+(define D
+(let [(D (piano-tone 65))] D))
+(define B
+(let [(B (piano-tone 55))] B))
+(define C
+(let [(C (piano-tone 70))] C))
+(define A
+(let [(A (piano-tone 62))] A))
+(define G
+(let [(G (piano-tone 68))] G))
+(define F
+(let [(F (piano-tone 75))] F))
 ```
-
+```
+(define E
+(let [(E (piano-tone 60))] E))
+(define D
+(let [(D (piano-tone 65))] D))
+(define B
+(let [(B (piano-tone 55))] B))
+(define C
+(let [(C (piano-tone 70))] C))
+(define A
+(let [(A (piano-tone 62))] A))
+(define G
+(let [(G (piano-tone 68))] G))
+(define F
+(let [(F (piano-tone 75))] F))
+```
 <br>
 <br>
