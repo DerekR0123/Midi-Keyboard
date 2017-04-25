@@ -58,3 +58,30 @@ Below is an excerpt of the code:<br>
 ```
 <br>
 <br>
+
+<b>Functional Approaches</b> - In my program many functions and helper functions are used to complete just about every ability my program has to offer. The best example of this is the function that combines our Note objects into Lines from the sheet music and then another function calls upon these helper functions to create the full song.<br>
+Below is an excerpt of the code:<br>
+
+```
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Actual Real Composition created with notes
+;;Composition done by Beethoven
+;;Composition Name: Fur Elise
+;;Sheet Music: In Repository
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define (FurElise)
+  (part1 'password1)
+  (part2 'password2)
+  (part3 'password3)
+  (part4 'password4)
+  (part5 'password5)
+  (part6 'password6))
+ ```
+ <br>
+ <br>
+ 
+ <b>State-Modification Approaches</b> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input.<br>
+<br>
+
+<br>
