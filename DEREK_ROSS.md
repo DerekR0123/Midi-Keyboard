@@ -70,13 +70,13 @@ Below is an excerpt of the code:<br>
 ;;Sheet Music: In Repository
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define (FurElise)
-  (part1 'password1)
-  (part2 'password2)
-  (part3 'password3)
-  (part4 'password4)
-  (part5 'password5)
-  (part6 'password6))
+(define (FurElise) ;;Function that calls upon the helper functions and okays the entire FurElise Song
+  (part1 'password1) ;;Function that plays the first line from the sheet music
+  (part2 'password2) ;;Function that plays the second line from the sheet music
+  (part3 'password3) ;;Function that plays the third line from the sheet music
+  (part4 'password4) ;;Function that plays the fourth line from the sheet music
+  (part5 'password5) ;;Function that plays the fifth line from the sheet music
+  (part6 'password6)) ;;Function that plays the sixth (final) line from the sheet music
  ```
  <br>
  <br>
