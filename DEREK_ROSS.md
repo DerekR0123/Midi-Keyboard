@@ -109,5 +109,23 @@ Below is an excerpt of the code:<br>
 <br>
 <br>
 
-<b>Iteration</b> - In my program I created a way to display the notes recursively and then I decided to show my knowledge of iteration and re-create the same thing but iteratively. I also did this as a way to play the music later on as well. I left it commented out because it literally did the same thing that was already acomplished. It is only there to serve as a proof of concept.<br>
+<b>Iteration</b> - In my program I created a way to get passed the missing New Line character problem in Racket. In Racket there is no such thing as a new line character so if you wanted to print out strings in a readable and decent looking fashion you run into trouble. I found a way by assigning Objects the Strings I wanted to print and then using iteration to print out the strings until I was done. This allowed me to create a Help-Text function that could display all of the possible commands my program has to offer to the user if they ran my program and weren't sure what It could do.<br>
+Below is an excerpt of the code:<br>
 <br>
+
+```
+(define (help-iter)
+  (helper1 0))
+  (define (helper1 counter)
+  (if (> counter 8)
+      null
+      (cond ((eqv? counter 1) "hello" (helper1 (+ counter 1)))
+            ((eqv? counter 2) (show str4) (helper1 (+ counter 1)))
+            ((eqv? counter 3) (show str5) (helper1 (+ counter 1)))
+            ((eqv? counter 4) (show str6) (helper1 (+ counter 1)))
+            ((eqv? counter 5) (show str7) (helper1 (+ counter 1)))
+            ((eqv? counter 6) (show str8) (helper1 (+ counter 1)))
+            ((eqv? counter 7) (show str9) (helper1 (+ counter 1)))
+            ((eqv? counter 8) (show str10) (helper1 (+ counter 1)))
+            (else (helper1 (+ counter 1))))))
+```
