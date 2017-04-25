@@ -21,16 +21,22 @@ Below is an excerpt of the code:<br>
 ;;Let 
 (define E
 (let [(E (piano-tone 60))] E))
+
 (define D
 (let [(D (piano-tone 65))] D))
+
 (define B
 (let [(B (piano-tone 55))] B))
+
 (define C
 (let [(C (piano-tone 70))] C))
+
 (define A
 (let [(A (piano-tone 62))] A))
+
 (define G
 (let [(G (piano-tone 68))] G))
+
 (define F
 (let [(F (piano-tone 75))] F))
 ```
@@ -38,20 +44,5 @@ Below is an excerpt of the code:<br>
 <br>
 
 
-```
- #lang web-server/insta 
-;;Library used to create the websites
 
-
-(define (start request)
-  ;;Sends a request to your web browser
-  
-  (response/xexpr
-   ;;The request is picked up and opens something in the following format
-   
-   '(html
-   
-   ## Anything you wish to add to the page goes here! You will see more cool stuff in my full example of the code! ##
-   )))
-   ```
 
