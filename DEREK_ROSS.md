@@ -30,7 +30,6 @@ Below is an excerpt of the code:<br>
 (let [(F (piano-tone 75))] F))
 ```
 <br>
-<br>
 
 <b>Recursion</b> - This was implemented through a series of functions that are able to Recursively display the Notes from a part of song or the entire song. This was done using helper functions that take the Note Objects I created earlier and read them from the parts of the song or whole song that we formed. The ending result recursively displays the notes as output.<br>
 Below is an excerpt of the code:<br>
