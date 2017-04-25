@@ -3,7 +3,7 @@
 <br>
 <h3>Overview:</h3><br>
 My project is called Midi-keyboard. Its a program designed in racket using libraries rsound and portaudion with specific use of there
-section called piano-tones. What I did was I took values from piano-tones and applied a <u>Let-Is-Lambda</u> approach to turn these into
+section called piano-tones. What I did was I took values from piano-tones and applied a <b>Let-Is-Lambda</b> approach to turn these into
 note objects. A few Recursive/Iterative functions later these objects were ordered sequentially to create a full line in sheet music and eventually a specific
 song that they modeled. The song chosen was FurElise by Beethovan. The final outcome of my project was a simple UI with a help-text
 function that can display all the commands my program can do as well as a user-command ui function that will execute one of the commands 
@@ -13,7 +13,7 @@ the user choices which ranges from Displaying/Playing a single note, Line of not
 <h3>Course Correlation:</h3><br>
 I would like to pick out specific topics and highlight some of the code that embodies them and explain why:<br>
 <br>
-<u>Let and Lambda</u> - In my program I decided to incorperate a Let-Is-Lambda implementation by creating the note objects using this
+<b>Let and Lambda</b> - In my program I decided to incorperate a Let-Is-Lambda implementation by creating the note objects using this
 approach. I chose to do this in order to display proper understanding of the concept and avoid the "Set!" approach we were warned about.
 Below is an excerpt of the code:<br>
 <br>
@@ -37,4 +37,21 @@ Below is an excerpt of the code:<br>
 <br>
 <br>
 
+
+```
+ #lang web-server/insta 
+;;Library used to create the websites
+
+
+(define (start request)
+  ;;Sends a request to your web browser
+  
+  (response/xexpr
+   ;;The request is picked up and opens something in the following format
+   
+   '(html
+   
+   ## Anything you wish to add to the page goes here! You will see more cool stuff in my full example of the code! ##
+   )))
+   ```
 
