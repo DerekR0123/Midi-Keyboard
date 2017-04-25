@@ -31,7 +31,7 @@ Below is an excerpt of the code:<br>
 ```
 <br>
 
-<b>Recursion</b> - This was implemented through a series of functions that are able to Recursively display the Notes from a part of song or the entire song. This was done using helper functions that take the Note Objects I created earlier and read them from the parts of the song or whole song that we formed. The ending result recursively displays the notes as output.<br>
+<b>Recursion</b> - This was implemented through a series of functions that are able to Recursively display the Notes from a part of song or the entire song. This was done by creating Lists and then recursively working our way down the Car and Cdr's of the list until we hit the end of the list (nil). There is also a few other examples of recursion in my program but I find this one to be the strongest.<br>
 Below is an excerpt of the code:<br>
 
 ```
