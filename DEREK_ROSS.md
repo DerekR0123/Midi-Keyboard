@@ -2,7 +2,7 @@
 <br>
 <br>
 <b><h3>Overview:</h3></b><br>
-My project is called <b>Midi-keyboard</b>. Its a program designed in Racket using libraries <b>rsound</b> and <b>portaudio</b> with specific use of their section called <b>piano-tones</b>. What I did was I took values from piano-tones and applied a <b>Let-Is-Lambda</b> approach to turn these into <b>Note Objects</b>. A few <b>Iterative</b> functions later these objects were ordered sequentially to create a full line in sheet music and eventually a specific song that they modeled. The song chosen was <b>FurElise by Beethovan</b>. I chose this song because it was the very first song I learned how to play on the piano and I thought it was fitting that it would be the very first one I would bring to life in Racket! The final outcome of my project was a simple UI with a <b>Recursive Help-Text function</b> that can display all the commands my program can do as well as a <b>Password-based Command system</b> that will execute any of the commands the user chooses. These commands range from Displaying or Playing: a single note, Line of notes, or the full song.<br>
+My project is called <b>Midi-keyboard</b>. Its a program designed in Racket using libraries <b>rsound</b> and <b>portaudio</b> with specific use of their section called <b>piano-tones</b>. What I did was I took values from piano-tones and applied a <b>Let-Is-Lambda</b> approach to turn these into <b>Note Objects</b>. A few <b>Iterative</b> functions later these objects were ordered sequentially to create a full line in sheet music and eventually a specific song that they modeled. The song chosen was <b>FurElise by Beethovan</b>. I chose this song because it was the very first song I learned how to play on the piano and I thought it was fitting that it would be the very first one I would bring to life in Racket! The final outcome of my project was a simple UI with a <b>Recursive Help-Text function</b> that can display all the commands my program can do as well as a <b>Password-based Command system</b> that will execute any of the commands the user chooses. These commands range from Displaying or Playing: a single note, Line of notes, or the full song. I am the sole contributor to everything in the project including the code as well. The only External Technology that was used was Sheet Music from the song FurElise and a physical Piano for concept correlation.<br>
 <br>
 <b><h3>Course Correlation:</h3></b><br>
 I would like to pick out specific topics and highlight some of the code that embodies them and explain why:<br>
@@ -176,3 +176,10 @@ Below is an excerpt of the code:<br>
 
 <br>
 <br>
+<b><h3>Closing</h3></b><br>
+I beleive my project displays a great understanding of the lessons learned in OPL throughout this semester. I beleive it encorperates a lot of the important topics discussed in class as well as embodiying the goal of the class: Object Orientation in Racket. After completing this project I find that I have a refined understanding of the topics, libraries outside of Homework for Racket, and a general sense of how things were done before Higher Level Languages that do most of the Object Orientation for us in today's world.<br>
+<br>
+
+Derek Ross<br>
+Derek_Ross@student.uml.edu<br>
+DerekR0123<br>
