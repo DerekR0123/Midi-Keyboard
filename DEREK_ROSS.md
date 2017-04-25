@@ -133,7 +133,7 @@ Below is an excerpt of the code:<br>
 <br>
 <br>
 
-<b>Object-Orientation</b> - As you have read so far from the other examples of my program you will find that just about everything in my program has to do with Objects and Object Oriented Programming. From the very start the Notes for the keys were created as objects all the way down to String Objects that were created to be read iteratively for a Help-Text UI menu. In my opinion the Help-Text menu shows a great example of objects and the use of <b>Lambda</b> in the form of an <b>Identity Function</b> <br>
+<b>Object-Orientation</b> - As you have read so far from the other examples of my program you will find that just about everything in my program has to do with Objects and Object Oriented Programming. From the very start the Notes for the Keys were created as Objects all the way down to String Objects that were created to be read Iteratively for a Help-Text UI Menu. In my opinion the Help-Text Menu shows a great example of Objects and the use of <b>Lambda</b> in the form of an <b>Identity Function</b> <br>
 Below is an excerpt of the code:<br>
 
 ```
