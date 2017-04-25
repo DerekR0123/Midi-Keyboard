@@ -31,10 +31,7 @@ Below is an excerpt of the code:<br>
 ```
 <br>
 <br>
-<b>Recursion</b> - This was implemented through a series of functions that are able to Recursively display the Notes from a part of song or the entire song. This was done using helper functions that take the Note Objects I created earlier and read them from the parts of the song or whole song that we formed. The ending result recursively displays the notes as output.<br>
-Below is an excerpt of the code:<br>
-<br>
-```
+
 ```
 ;;Each part put in a list
 (define recursive-part1 '(E D E D E B D C A C E A B E G B C E E D '- A E A  E E G A E A))
