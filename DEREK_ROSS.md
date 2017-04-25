@@ -81,7 +81,7 @@ Below is an excerpt of the code:<br>
  <br>
  <br>
  
-<b>State-Modification Approaches</b> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input. I beleive my Password-based System function shows the best example of state-modification based on the user's alteration on the password input.<br>
+<b>State-Modification Approaches</b> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input. I beleive my Midi-Keyboard menu (Password-based Command System) shows the best example of state-modification based on the user's alteration on the password input.<br>
 Below is an excerpt of the code:<br>
 <br>
 
