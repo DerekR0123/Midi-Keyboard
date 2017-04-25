@@ -13,7 +13,6 @@ approach. I chose to do this in order to display proper understanding of the con
 Below is an excerpt of the code:<br>
 <br>
 ```
- #
 (define E
 (let [(E (piano-tone 60))] E))
 (define D
@@ -28,7 +27,6 @@ Below is an excerpt of the code:<br>
 (let [(G (piano-tone 68))] G))
 (define F
 (let [(F (piano-tone 75))] F))
-#)))
 ```
 <br>
 <br>
