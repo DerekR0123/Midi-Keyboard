@@ -81,7 +81,33 @@ Below is an excerpt of the code:<br>
  <br>
  <br>
  
- <b>State-Modification Approaches</b> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input.<br>
+<b>State-Modification Approaches</b> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input. I beleive my Password-based System function shows the best example of state-modification based on the user's alteration on the password input.<br>
+Below is an excerpt of the code:<br>
 <br>
 
+```
+;;;1.8 Midi-Keyboard Menu!;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;This menu allows you to do any part of my program just by typing in the desired phrase
+
+(define (midi-keyboard password)
+  (cond ((eqv? password 'display-part1) (display-notes 'part1))
+        ((eqv? password 'display-part2) (display-notes 'part2))
+        ((eqv? password 'display-part3) (display-notes 'part3))
+        ((eqv? password 'display-part4) (display-notes 'part4))
+        ((eqv? password 'display-part5) (display-notes 'part5))
+        ((eqv? password 'display-part6) (display-notes 'part6))
+        ((eqv? password 'display-whole) (display-notes 'whole))
+        ((eqv? password 'play-part1)    (part1 'password1))
+        ((eqv? password 'play-part2)    (part2 'password2))
+        ((eqv? password 'play-part3)    (part3 'password3))
+        ((eqv? password 'play-part4)    (part4 'password4))
+        ((eqv? password 'play-part5)    (part5 'password5))
+        ((eqv? password 'play-part6)    (part6 'password6))
+        ((eqv? password 'play-whole)    (FurElise))
+        (else "Invalid Entry -> Please enter (help) for more info")))
+```
+<br>
+<br>
+
+<b>Iteration</b> - In my program I created a way to display the notes recursively and then I decided to show my knowledge of iteration and re-create the same thing but iteratively. I also did this as a way to play the music later on as well. I left it commented out because it literally did the same thing that was already acomplished. It is only there to serve as a proof of concept.<br>
 <br>
