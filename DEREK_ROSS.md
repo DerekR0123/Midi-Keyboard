@@ -129,3 +129,50 @@ Below is an excerpt of the code:<br>
             ((eqv? counter 8) (show str10) (helper1 (+ counter 1)))
             (else (helper1 (+ counter 1))))))
 ```
+
+<br>
+<br>
+
+<b>Object-Orientation</b> - As you have read so far from the other examples of my program you will find that just about everything in my program has to do with Objects and Object Oriented Programming. From the very start the Notes for the keys were created as objects all the way down to String Objects that were created to be read iteratively for a Help-Text UI menu. In my opinion the Help-Text menu shows a great example of objects and the use of <b>Lambda</b> in the form of an <b>Identity Function</b> <br>
+Below is an excerpt of the code:<br>
+
+```
+;;Using lambda I made the identity function to print a string which can be used to add a newline between strings
+(define (show y)
+  ((lambda (x) x) y))
+
+;;Opening Strings
+(define str1 "Welcome, for a list of options please type in (help)")
+(define str2 "Otherwise proceed to enter the desired command:")
+(show str1)
+(show str2)
+
+;;Help Option String Notes
+(define str3 "Please enter one of these commands:")
+(define str4 "To display notes please enter (midi-keyboard 'display-part1) - displays notes for part 1")
+(define str5 "                              (midi-keyboard 'display-part2) - displays notes for part 2")
+(define str6 "                              (midi-keyboard 'display-part3) - displays notes for part 3")
+(define str7 "                              (midi-keyboard 'display-part4) - displays notes for part 4")
+(define str8 "                              (midi-keyboard 'display-part5) - displays notes for part 5")
+(define str9 "                              (midi-keyboard 'display-part6) - displays notes for part 6")
+(define str10"                              (midi-keyboard 'display-whole) - displays notes for the whole song")
+(define str11 " ")
+
+;;Help Option String Notes
+(define str12 "Please enter one of these commands:")
+(define str13 "To display notes please enter (midi-keyboard 'play-part1) - plays notes for part 1")
+(define str14 "                              (midi-keyboard 'play-part2) - plays notes for part 2")
+(define str15 "                              (midi-keyboard 'play-part3) - plays notes for part 3")
+(define str16 "                              (midi-keyboard 'play-part4) - plays notes for part 4")
+(define str17 "                              (midi-keyboard 'play-part5) - plays notes for part 5")
+(define str18 "                              (midi-keyboard 'play-part6) - plays notes for part 6")
+(define str19 "                              (midi-keyboard 'play-whole) - plays notes for the whole song")
+
+;;Total Menu
+(define list5 (cons str3 (cons str4 (cons str5 (cons str6 (cons str7 (cons str8 (cons str9 (cons str10
+              (cons str11 (cons str12 (cons str13 (cons str14 (cons str15 (cons str16 (cons str17 (cons str18
+               (cons str19 str11))))))))))))))))))
+```
+
+<br>
+<br>
