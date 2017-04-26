@@ -9,6 +9,11 @@
 (require rsound
          rsound/piano-tones)
 
+;;
+;; PLEASE READ
+;;Windows is NOT compatable for some reason with piano-tones and rsound streams
+;;I am Using Linux
+;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -82,22 +87,73 @@
 ;;Creating Note Objects from traditional Piano Keys;;;;;;
 ;;Will incorperate the Let  / Lambda that we were taught in class
 
-;;Let 
-(define E
-(let [(E (piano-tone 60))] E))
-(define D
-(let [(D (piano-tone 65))] D))
-(define B
-(let [(B (piano-tone 55))] B))
-(define C
-(let [(C (piano-tone 70))] C))
-(define A
-(let [(A (piano-tone 62))] A))
-(define G
-(let [(G (piano-tone 68))] G))
-(define F
-(let [(F (piano-tone 75))] F))
 
+;;Playing or displaying individual notes incorperating the Let  / Lambda that we were taught in class
+
+;;Play or Display E
+(define (single-E)
+  (let ((E (piano-tone 60)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play E))
+                   ((eq? msg 'display) "E")
+                   (else "invalid action for note")))))
+
+;;Play or Display D
+(define (single-D)
+  (let ((D (piano-tone 65)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play D))
+                   ((eq? msg 'display) "D")
+                   (else "invalid action for note")))))
+
+;;Play or Display B
+(define (single-B)
+  (let ((B (piano-tone 55)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play B))
+                   ((eq? msg 'display) "B")
+                   (else "invalid action for note")))))
+
+;;Play or Display C
+(define (single-C)
+  (let ((C (piano-tone 70)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play C))
+                   ((eq? msg 'display) "C")
+                   (else "invalid action for note")))))
+
+;;Play or Display A
+(define (single-A)
+  (let ((A (piano-tone 62)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play A))
+                   ((eq? msg 'display) "A")
+                   (else "invalid action for note")))))
+
+;;Play or Display G
+(define (single-G)
+  (let ((G (piano-tone 68)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play G))
+                   ((eq? msg 'display) "G")
+                   (else "invalid action for note")))))
+
+;;Play or Display F
+(define (single-F)
+  (let ((F (piano-tone 75)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play F))
+                   ((eq? msg 'display) "F")
+                   (else "invalid action for note")))))
+
+;;Set up for easy use of the functions
+(define E (single-E))
+(define D (single-D))
+(define B (single-B))
+(define C (single-C))
+(define A (single-A))
+(define G (single-G))
+(define F (single-F))
 
 ;;;;;;;;;;;;;;; END of 1.2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -116,168 +172,168 @@
 (define (part1 password)
  (cond ((eq? password 'password1)
         
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play D)
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play D)
-(sleep 0.28)
-(play B)
-(sleep 0.3)
-(play D)
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play A)
-
-(sleep 0.32)
-(play C)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play B)
-
-
-(sleep 0.32)
-(play E)
-(sleep 0.3)
-(play G)
-(sleep 0.3)
-(play B)
-(sleep 0.3)
-(play C)
-
-(sleep 0.32)
-(play E)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play D)
+        (sleep 0.28)
+        (E 'play)
+        (sleep 0.28)
+        (D 'play)
+        (sleep 0.28)
+        (E 'play)
+        (sleep 0.28)
+        (D 'play)
+        (sleep 0.28)
+        (B 'play)
+        (sleep 0.3)
+        (D 'play)
+        (sleep 0.3)
+        (C 'play)
+        (sleep 0.3)
+        (A 'play)
+        
+        (sleep 0.32)
+        (C 'play)
+        (sleep 0.3)
+        (E 'play)
+        (sleep 0.3)
+        (A 'play)
+        (sleep 0.3)
+        (B 'play)
+        
+        
+        (sleep 0.32)
+        (E 'play)
+        (sleep 0.3)
+        (G 'play)
+        (sleep 0.3)
+        (B 'play)
+        (sleep 0.3)
+        (C 'play)
+        
+        (sleep 0.32)
+        (E 'play)
+        (sleep 0.3)
+        (E 'play)
+        (sleep 0.3)
+        (D 'play)
 
 ;;;;;;;;;;; end of line1 of part1 ;;;;;;;;;;
 
-(sleep 0.32)
-
-(sleep 0.32)
-(play A)
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play A)
-
-(sleep 0.32)
-(play E)
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play G)
-
-(sleep 0.32)
-(play A)
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play A)
+        (sleep 0.32)
+        
+        (sleep 0.32)
+        (A 'play)
+        (sleep 0.28)
+        (E 'play)
+        (sleep 0.28)
+        (A 'play)
+        
+        (sleep 0.32)
+        (E 'play)
+        (sleep 0.28)
+        (E 'play)
+        (sleep 0.28)
+        (G 'play)
+        
+        (sleep 0.32)
+        (A 'play)
+        (sleep 0.28)
+        (E 'play)
+        (sleep 0.28)
+        (A 'play)
 
 ;;;;; end of line2 of part1
 
-)
-(else "bad password")))
+        )
+       (else "bad password")))
 ;;;;;;;;;;;;;;;;;;;END of PART1;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;;;;;;;;;;;;;;;;PART2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (part2 password)
- (cond ((eq? password 'password2)
-
-
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play D)
-(sleep 0.28)
-(play E)
-(sleep 0.3)
-(play B)
-(sleep 0.3)
-(play D)
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play A)
-
-(sleep 0.32)
-(play C)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play B)
-
-(sleep 0.32)
-(play E)
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play B)
-(sleep 0.3)
-(play A)
-
-
-(sleep 0.32)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.3)
-(play B)
-(sleep 0.3)
-(play D)
-(sleep 0.3)
-(play C)
-
-;;;end of line1 of part2 ;;;;;
-
-(sleep 0.32)
-
-(sleep 0.32)
-(play A)
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play A)
-
-(sleep 0.32)
-(play E)
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play G)
-
-(sleep 0.32)
-(play A)
-(sleep 0.28)
-(play E)
-(sleep 0.28)
-(play A)
-(sleep 0.14)
-
-;;end of line2 of part2 ;;;
-
-)
-(else "bad password")))
+  (cond ((eq? password 'password2)
+         
+         
+         (sleep 0.28)
+         (E 'play)
+         (sleep 0.28)
+         (D 'play)
+         (sleep 0.28)
+         (E 'play)
+         (sleep 0.3)
+         (B 'play)
+         (sleep 0.3)
+         (D 'play)
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         (sleep 0.32)
+         (C 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (B 'play)
+         
+         (sleep 0.32)
+         (E 'play)
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (B 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         
+         (sleep 0.32)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.3)
+         (B 'play)
+         (sleep 0.3)
+         (D 'play)
+         (sleep 0.3)
+         (C 'play)
+         
+         ;;;end of line1 of part2 ;;;;;
+         
+         (sleep 0.32)
+         
+         (sleep 0.32)
+         (A 'play)
+         (sleep 0.28)
+         (E 'play)
+         (sleep 0.28)
+         (A 'play)
+         
+         (sleep 0.32)
+         (E 'play)
+         (sleep 0.28)
+         (E 'play)
+         (sleep 0.28)
+         (G 'play)
+         
+         (sleep 0.32)
+         (A 'play)
+         (sleep 0.28)
+         (E 'play)
+         (sleep 0.28)
+         (A 'play)
+         (sleep 0.14)
+         
+         ;;end of line2 of part2 ;;;
+         
+         )
+        (else "bad password")))
 
 ;;;;;;;;;;;;;;;;;;; END of Part2 ;;;;;;;;;;;;;;;;;;;;;;
 
@@ -285,93 +341,93 @@
 
 
 (define (part3 password)
- (cond ((eq? password 'password3)
-
-(sleep 0.28)
-(play A)
-
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play B)
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play G)
-(sleep 0.3)
-(play B)
-(sleep 0.3)
-(play C)
-
-(sleep 0.3)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play B)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play C)
-(sleep 0.27)
-(play A)
-
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-
-;;;;; end of line1 of part3 ;;;;;
-
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play G)
-
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-
-(sleep 0.3)
-
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-
-;;;;; end of line2 of part3 ;;;;;;;
-
-)
-(else "bad password")))
+  (cond ((eq? password 'password3)
+         
+         (sleep 0.28)
+         (A 'play)
+         
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (B 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (G 'play)
+         (sleep 0.3)
+         (B 'play)
+         (sleep 0.3)
+         (C 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (B 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (C 'play)
+         (sleep 0.27)
+         (A 'play)
+         
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         ;;;;; end of line1 of part3 ;;;;;
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (G 'play)
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         (sleep 0.3)
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         ;;;;; end of line2 of part3 ;;;;;;;
+         
+         )
+        (else "bad password")))
 
 ;;;;;;;;;;;;;;; END OF PART 3 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -380,269 +436,269 @@
 
 
 (define (part4 password)
- (cond ((eq? password 'password4)
-
-(sleep 0.28)
-(play B)
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play B)
-(sleep 0.3)
-(play A)
-
-(sleep 0.32)
-(play B)
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play D)
-(sleep 0.3)
-(play E)
-
-(sleep 0.3)
-(play G)
-(sleep 0.3)
-(play F)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play D)
-
-(sleep 0.32)
-(play F)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play D)
-(sleep 0.3)
-(play C)
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play D)
-(sleep 0.3)
-(play C)
-
-;;;;; end of line1 of part4 ;;;;;
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play G)
-
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play G)
-(sleep 0.3)
-(play C)
-
-(sleep 0.3)
-(play G)
-(sleep 0.3)
-(play G)
-(sleep 0.3)
-(play B)
-
-(sleep 0.32)
-(play A)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-
-;;;; end of line2 of part4 ;;;;
-
-)
-(else "bad password")))
+  (cond ((eq? password 'password4)
+         
+         (sleep 0.28)
+         (B 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (B 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         (sleep 0.32)
+         (B 'play)
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (D 'play)
+         (sleep 0.3)
+         (E 'play)
+         
+         (sleep 0.3)
+         (G 'play)
+         (sleep 0.3)
+         (F 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (D 'play)
+         
+         (sleep 0.32)
+         (F 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (D 'play)
+         (sleep 0.3)
+         (C 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (D 'play)
+         (sleep 0.3)
+         (C 'play)
+         
+         ;;;;; end of line1 of part4 ;;;;;
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (G 'play)
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (G 'play)
+         (sleep 0.3)
+         (C 'play)
+         
+         (sleep 0.3)
+         (G 'play)
+         (sleep 0.3)
+         (G 'play)
+         (sleep 0.3)
+         (B 'play)
+         
+         (sleep 0.32)
+         (A 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         ;;;; end of line2 of part4 ;;;;
+         
+         )
+        (else "bad password")))
 
 ;;;;;;;;;;;;;;;;;;;;; END of PART4 ;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;; PART5;;;;;;;;;;;;;;;;;;;;;
 (define (part5 password)
- (cond ((eq? password 'password5)
-        
-(sleep 0.28)
-(play B)
-
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play B)
-(sleep 0.27)
-(play C)
-(sleep 0.27)
-(play A)
-
-(sleep 0.3)
-(play C)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play B)
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play G)
-(sleep 0.3)
-(play B)
-
-;;;; end of line1 part5 ;;;;;;;
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play E)
-
-(sleep 0.1)
-
-(sleep 0.1)
-
-(sleep 0.3)
-(play A)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play A)
-
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play E)
-(sleep 0.3)
-(play G)
-
-;;;;end of line2 of part5 ;;;;
-
-)
-(else "bad password")))
+  (cond ((eq? password 'password5)
+         
+         (sleep 0.28)
+         (B 'play)
+         
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (B 'play)
+         (sleep 0.27)
+         (C 'play)
+         (sleep 0.27)
+         (A 'play)
+         
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (B 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (G 'play)
+         (sleep 0.3)
+         (B 'play)
+         
+         ;;;; end of line1 part5 ;;;;;;;
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (E 'play)
+         
+         (sleep 0.1)
+         
+         (sleep 0.1)
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (A 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.3)
+         (G 'play)
+         
+         ;;;;end of line2 of part5 ;;;;
+         
+         )
+        (else "bad password")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; END OF PART5 ;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;; PART6 ;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (define (part6 password)
- (cond ((eq? password 'password6)
-
-(sleep 0.2)
-(play C)
-
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play B)
-(sleep 0.27)
-(play D)
-(sleep 0.27)
-(play C)
-(sleep 0.27)
-(play A)
-
-(sleep 0.3)
-(play C)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play A)
-(sleep 0.27)
-(play B)
-
-(sleep 0.3)
-(play E)
-(sleep 0.27)
-(play C)
-(sleep 0.27)
-(play B)
-(sleep 0.27)
-(play A)
-
-;;;;end of line1 of part6 ;;;;
-
-(sleep 0.3)
-(play A)
-(sleep 0.27)
-(play E)
-(sleep 0.27)
-(play A)
-
-(sleep .08)
-
-(sleep 0.3)
-(play A)
-(sleep 0.20)
-(play E)
-(sleep 0.20)
-(play A)
-
-(sleep 0.3)
-(play E)
-(sleep 0.20)
-(play E)
-(sleep 0.20)
-(play G)
-
-(sleep 0.3)
-(play A)
-(sleep 0.20)
-(play E)
-(sleep 0.20)
-(play A)
-
-;;;;end of line2 of part6
-
-)
-(else "bad password")))
+  (cond ((eq? password 'password6)
+         
+         (sleep 0.2)
+         (C 'play)
+         
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (B 'play)
+         (sleep 0.27)
+         (D 'play)
+         (sleep 0.27)
+         (C 'play)
+         (sleep 0.27)
+         (A 'play)
+         
+         (sleep 0.3)
+         (C 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (A 'play)
+         (sleep 0.27)
+         (B 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.27)
+         (C 'play)
+         (sleep 0.27)
+         (B 'play)
+         (sleep 0.27)
+         (A 'play)
+         
+         ;;;;end of line1 of part6 ;;;;
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.27)
+         (E 'play)
+         (sleep 0.27)
+         (A 'play)
+         
+         (sleep .08)
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.20)
+         (E 'play)
+         (sleep 0.20)
+         (A 'play)
+         
+         (sleep 0.3)
+         (E 'play)
+         (sleep 0.20)
+         (E 'play)
+         (sleep 0.20)
+         (G 'play)
+         
+         (sleep 0.3)
+         (A 'play)
+         (sleep 0.20)
+         (E 'play)
+         (sleep 0.20)
+         (A 'play)
+         
+         ;;;;end of line2 of part6
+         
+         )
+        (else "bad password")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;; END OF PART6;;;;; ;;;;;;;;;;;;;;;;;;;;;;
 
@@ -674,25 +730,10 @@
 
 ;;1.5 Recursion;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;list '(A B D)) will not work
-;;Reason why it because the symbols come out a 'A 'B -> which mean nothing. You need to cons the actual
-;;variable containers. With that being said it isn't possible to play more then two tones in a cons cell list
-;;before it spits out an error
-
-;;Incorrect but good for proof of an idea
-(define list (cons A B))
-(define (recursive-play list)
-  (if (null? list)
-      '()
-      ((play (car list))
-       (recursive-play (cdr list)))))
-;;
-
-
 ;;So in order to get a good view of the recursion I have learned in class I will output the notes from the song.
 ;;Here I will create the lists for each part which we can later access with a system.
 
-;;Each part put in a list
+;;Each part put in a list as symbols
 (define recursive-part1 '(E D E D E B D C A C E A B E G B C E E D '- A E A  E E G A E A))
 (define recursive-part2 '(E D E B D C A C E A B E C B A E D E D E B D C '- A E A E E G A E A '-))
 (define recursive-part3 '(A C E A B E G B C E E D E D E B D C A C E A A E A E E G A E A '- A E A))
@@ -735,7 +776,7 @@
 ;;Provides. However you can't just type in text like a printf from C programming -> there is no such thing as a
 ;; new line character. In order to get past this I made a function:
 
-;;Using lambda I made the identity function to print a string which can be used to add a newline between strings
+;;Using lambda I made the Identity Function to print a string which can be used to add a newline between strings
 (define (show y)
   ((lambda (x) x) y))
 
@@ -768,8 +809,8 @@
 
 ;;Total Menu
 (define list5 (cons str3 (cons str4 (cons str5 (cons str6 (cons str7 (cons str8 (cons str9 (cons str10
-              (cons str11 (cons str12 (cons str13 (cons str14 (cons str15 (cons str16 (cons str17 (cons str18
-               (cons str19 str11))))))))))))))))))
+                                                                                                 (cons str11 (cons str12 (cons str13 (cons str14 (cons str15 (cons str16 (cons str17 (cons str18
+                                                                                                                                                                                           (cons str19 str11))))))))))))))))))
 
 
 ;;Help Function to Call menu
@@ -781,23 +822,33 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;END OF 1.6 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;;;;;;;;;;;;;;;;1.7 Iterative way to display menu (little slow) ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\
+;;;;;;;;;;;;;;;;1.7 Iterative way to display menu  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\
 
-;;Not fully correct but good for proof of concept
-(define (help-iter)
-  (helper1 0))
-  (define (helper1 counter)
-  (if (> counter 8)
-      null
-      (cond ((eqv? counter 1) "hello" (helper1 (+ counter 1)))
-            ((eqv? counter 2) (show str4) (helper1 (+ counter 1)))
-            ((eqv? counter 3) (show str5) (helper1 (+ counter 1)))
-            ((eqv? counter 4) (show str6) (helper1 (+ counter 1)))
-            ((eqv? counter 5) (show str7) (helper1 (+ counter 1)))
-            ((eqv? counter 6) (show str8) (helper1 (+ counter 1)))
-            ((eqv? counter 7) (show str9) (helper1 (+ counter 1)))
-            ((eqv? counter 8) (show str10) (helper1 (+ counter 1)))
-            (else (helper1 (+ counter 1))))))
+;;attempt at re-creating it using iterative way to print the help-text strings
+
+(define (display-iter)
+  (helper1 1))
+
+;;helper function for display-iter
+
+(define (helper1 counter)
+  (cond ((eqv? counter 1) (list "hello"
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 2) (list (show str4)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 3) (list (show str5)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 4) (list (show str6)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 5) (list (show str7)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 6) (list (show str8)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 7) (list (show str9)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 8) (list (show str10)
+                                (helper1 (+ counter 1))))
+        (else "")))
 ;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;END OF 1.7 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -828,33 +879,8 @@
 
 
 
-
-
-
 ;;End of Program
 ;;Derek Ross.
 
 
 
-;;Extra Idea's
-
-
-;;;;;;;;;;;;;Idea for Environment Later;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;(big-bang 1000 1000 2 3)
-;;(define (change w a-key-event)
- ;;(cond
-   ;; [(key=? a-key-event 'left) (play (piano-tone 60))]
-   ;; [(key=? a-key-event 'right) (play (piano-tone 80))]
-   ;; [else w]))
-
-
-
-
-;;;;;;;;;;;;;;; idea #2 for environment
-;;(define (key-press x y)
-  ;;(cond [(equal? y 'x) (play A)]
-    ;;    [(equal? y 'c) (play B)]
-  ;;      [else x]))
-
-;;(big-bang 1000 (on-release key-press))
