@@ -2,7 +2,7 @@
 <br>
 <br>
 <b><h3>Overview:</h3></b><br>
-My project is called <b>Midi-keyboard</b>. Its a program designed in Racket using libraries <b>rsound</b> and <b>portaudio</b> with specific use of their section called <b>piano-tones</b>. What I did was I took values from piano-tones and applied a <b>Let-Is-Lambda</b> approach to turn these into <b>Note Objects</b>. A few <b>Iterative</b> functions later these objects were ordered sequentially to create a full line in sheet music and eventually a specific song that they modeled. The song chosen was <b>FurElise by Beethovan</b>. I chose this song because it was the very first song I learned how to play on the piano and I thought it was fitting that it would be the very first one I would bring to life in Racket! The final outcome of my project was a simple UI with a <b>Recursive Help-Text function</b> that can display all the commands my program can do as well as a <b>Password-based Command system</b> that will execute any of the commands the user chooses. These commands range from Displaying or Playing: a single note, Line of notes, or the full song. I am the sole contributor to everything in the project including the code as well. The only External Technology that was used was Sheet Music from the song FurElise and a physical Piano for concept correlation.<br>
+My project is called <b>Midi-keyboard</b>. Its a program designed in Racket using libraries <b>rsound</b> and <b>portaudio</b> with specific use of their section called <b>piano-tones</b>. What I did was I took values from piano-tones and applied a <b>Let-Is-Lambda</b> approach to turn these into <b>Note Functions</b>. The next step was then to bind these Note Functions into <b>Note Objects</b>. The next few functions ordered Note Objects sequentially to create a full line in sheet music as helper functions for a larger function that combined them to create the full song that they modeled. The song chosen was <b>FurElise by Beethovan</b>. I chose this song because it was the very first song I learned how to play on the piano and I thought it was fitting that it would be the very first one I would bring to life in Racket! The next step was adding the ability to display the Notes that went into these functions. I built upon my ability to display single notes and made lists of the symbols that represented these notes. From here I used a <b>Resursive</b> Function to walk down the car / cdr of the list and print out the Notes.The final outcome of my project was a simple UI with a <b>Iterative Help-Text function</b> that can display all the commands my program can do as well as a <b>Password-based Command system</b> that will execute any of the commands the user chooses. These commands range from Displaying or Playing: a single note, Line of notes, or the full song. I am the sole contributor to everything in the project including the code as well. The only External Technology that was used was Sheet Music from the song FurElise and a physical Piano for concept correlation.<br>
 <br>
 <b><h3>Course Correlation:</h3></b><br>
 I would like to pick out specific topics and highlight some of the code that embodies them and explain why:<br>
@@ -14,20 +14,70 @@ approach. I chose to do this in order to display proper understanding of the con
 Below is an excerpt of the code:<br>
 <br>
 ```
-(define E
-(let [(E (piano-tone 60))] E))
-(define D
-(let [(D (piano-tone 65))] D))
-(define B
-(let [(B (piano-tone 55))] B))
-(define C
-(let [(C (piano-tone 70))] C))
-(define A
-(let [(A (piano-tone 62))] A))
-(define G
-(let [(G (piano-tone 68))] G))
-(define F
-(let [(F (piano-tone 75))] F))
+;;Play or Display E
+(define (single-E)
+  (let ((E (piano-tone 60)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play E))
+                   ((eq? msg 'display) "E")
+                   (else "invalid action for note")))))
+
+;;Play or Display D
+(define (single-D)
+  (let ((D (piano-tone 65)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play D))
+                   ((eq? msg 'display) "D")
+                   (else "invalid action for note")))))
+
+;;Play or Display B
+(define (single-B)
+  (let ((B (piano-tone 55)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play B))
+                   ((eq? msg 'display) "B")
+                   (else "invalid action for note")))))
+
+;;Play or Display C
+(define (single-C)
+  (let ((C (piano-tone 70)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play C))
+                   ((eq? msg 'display) "C")
+                   (else "invalid action for note")))))
+
+;;Play or Display A
+(define (single-A)
+  (let ((A (piano-tone 62)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play A))
+                   ((eq? msg 'display) "A")
+                   (else "invalid action for note")))))
+
+;;Play or Display G
+(define (single-G)
+  (let ((G (piano-tone 68)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play G))
+                   ((eq? msg 'display) "G")
+                   (else "invalid action for note")))))
+
+;;Play or Display F
+(define (single-F)
+  (let ((F (piano-tone 75)))
+    (lambda (msg)
+             (cond ((eq? msg 'play) (play F))
+                   ((eq? msg 'display) "F")
+                   (else "invalid action for note")))))
+
+;;Set up for easy use of the functions
+(define E (single-E))
+(define D (single-D))
+(define B (single-B))
+(define C (single-C))
+(define A (single-A))
+(define G (single-G))
+(define F (single-F))
 ```
 <br>
 
@@ -81,7 +131,7 @@ Below is an excerpt of the code:<br>
  <br>
  <br>
  
-<b>State-Modification Approaches</b> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input. I beleive my Midi-Keyboard menu (Password-based Command System) shows the best example of state-modification based on the user's alteration on the password input.<br>
+<b>State-Modification Approaches</b> - There are a few password based systems throughout the program that will run different functions and provide different outputs and abilities based on the state of the password being changed by the user input. The way I created the Note Objects touches upon this in the stages where you can determine whether to play or display the Note. In addition I beleive my Midi-Keyboard menu (Password-based Command System) shows the best example of state-modification based on the user's alteration on the password input.<br>
 Below is an excerpt of the code:<br>
 <br>
 
@@ -114,20 +164,29 @@ Below is an excerpt of the code:<br>
 <br>
 
 ```
-(define (help-iter)
-  (helper1 0))
-  (define (helper1 counter)
-  (if (> counter 8)
-      null
-      (cond ((eqv? counter 1) "hello" (helper1 (+ counter 1)))
-            ((eqv? counter 2) (show str4) (helper1 (+ counter 1)))
-            ((eqv? counter 3) (show str5) (helper1 (+ counter 1)))
-            ((eqv? counter 4) (show str6) (helper1 (+ counter 1)))
-            ((eqv? counter 5) (show str7) (helper1 (+ counter 1)))
-            ((eqv? counter 6) (show str8) (helper1 (+ counter 1)))
-            ((eqv? counter 7) (show str9) (helper1 (+ counter 1)))
-            ((eqv? counter 8) (show str10) (helper1 (+ counter 1)))
-            (else (helper1 (+ counter 1))))))
+(define (display-iter)
+  (helper1 1))
+
+;;helper function for display-iter
+
+(define (helper1 counter)
+  (cond ((eqv? counter 1) (list "hello"
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 2) (list (show str4)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 3) (list (show str5)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 4) (list (show str6)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 5) (list (show str7)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 6) (list (show str8)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 7) (list (show str9)
+                                (helper1 (+ counter 1))))
+        ((eqv? counter 8) (list (show str10)
+                                (helper1 (+ counter 1))))
+        (else "")))
 ```
 
 <br>
