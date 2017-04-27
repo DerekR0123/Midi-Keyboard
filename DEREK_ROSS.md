@@ -14,70 +14,23 @@ approach. I chose to do this in order to display proper understanding of the con
 Below is an excerpt of the code:<br>
 <br>
 ```
-;;Play or Display E
-(define (single-E)
-  (let ((E (piano-tone 60)))
+;;Function for Making Notes
+(define (make-note note-val note-string)
+  (let ((note-sound (piano-tone note-val)))
     (lambda (msg)
-             (cond ((eq? msg 'play) (play E))
-                   ((eq? msg 'display) "E")
-                   (else "invalid action for note")))))
+      (cond ((eq? msg 'play) (play note-sound))
+            ((eq? msg 'display) note-string)
+            (else "invalid action for note")))))
 
-;;Play or Display D
-(define (single-D)
-  (let ((D (piano-tone 65)))
-    (lambda (msg)
-             (cond ((eq? msg 'play) (play D))
-                   ((eq? msg 'display) "D")
-                   (else "invalid action for note")))))
 
-;;Play or Display B
-(define (single-B)
-  (let ((B (piano-tone 55)))
-    (lambda (msg)
-             (cond ((eq? msg 'play) (play B))
-                   ((eq? msg 'display) "B")
-                   (else "invalid action for note")))))
-
-;;Play or Display C
-(define (single-C)
-  (let ((C (piano-tone 70)))
-    (lambda (msg)
-             (cond ((eq? msg 'play) (play C))
-                   ((eq? msg 'display) "C")
-                   (else "invalid action for note")))))
-
-;;Play or Display A
-(define (single-A)
-  (let ((A (piano-tone 62)))
-    (lambda (msg)
-             (cond ((eq? msg 'play) (play A))
-                   ((eq? msg 'display) "A")
-                   (else "invalid action for note")))))
-
-;;Play or Display G
-(define (single-G)
-  (let ((G (piano-tone 68)))
-    (lambda (msg)
-             (cond ((eq? msg 'play) (play G))
-                   ((eq? msg 'display) "G")
-                   (else "invalid action for note")))))
-
-;;Play or Display F
-(define (single-F)
-  (let ((F (piano-tone 75)))
-    (lambda (msg)
-             (cond ((eq? msg 'play) (play F))
-                   ((eq? msg 'display) "F")
-                   (else "invalid action for note")))))
-
-;;Set up for easy use of the functions
-(define E (single-E))
-(define D (single-D))
-(define B (single-B))
-(define C (single-C))
-(define A (single-A))
-(define G (single-G))
-(define F (single-F))
+;;Bind the objects using our make-note function
+(define E (make-note 60 "E"))
+(define D (make-note 65 "D"))
+(define B (make-note 55 "B"))
+(define C (make-note 70 "C"))
+(define A (make-note 62 "A"))
+(define G (make-note 68 "G"))
+(define F (make-note 75 "F"))
 ```
 <br>
 
